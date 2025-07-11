@@ -142,3 +142,32 @@ input, textarea {
   position: relative;
   z-index: 2;
 }
+
+/* 🔽 Responsive for phones/tablets */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.1em;
+    padding: 0 10px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 12px 24px;
+  }
+
+  form {
+    padding: 25px;
+  }
+
+  input, textarea {
+    font-size: 0.95rem;
+  }
+
+  .deco-img {
+    width: 60px !important;
+  }
+}
