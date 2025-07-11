@@ -138,6 +138,7 @@ input, textarea {
   50% { box-shadow: 0 0 30px rgba(255,105,180,0.8); }
 }
 
+.home,
 .thank-you {
   position: relative;
   z-index: 2;
