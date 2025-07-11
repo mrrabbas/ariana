@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hey Ariana 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Decorative Images -->
+  <img src="images/hello-kitty.png" class="deco-img kitty" alt="Hello Kitty">
+  <img src="images/my-melody.png" class="deco-img melody" alt="My Melody">
+  <img src="images/cinnamoroll.png" class="deco-img cinna" alt="Cinnamoroll">
+  <img src="images/roses.png" class="deco-img roses roses1" alt="Roses">
+  <img src="images/roses.png" class="deco-img roses roses2" alt="Roses">
+
+  <!-- CSS-Animated Decorations -->
+  <div class="decor heart h1"></div><div class="decor heart h2"></div><div class="decor heart h3"></div>
+  <div class="decor star s1"></div><div class="decor star s2"></div><div class="decor star s3"></div>
+  <div class="decor shooting-star ss1"></div><div class="decor shooting-star ss2"></div>
+
+  <!-- Home Page -->
+  <section class="home">
+    <h1>Hey Ariana 💕</h1>
+    <p>Whenever you're mad or upset, use this form to tell me what's on your mind. I’ll listen 💌</p>
+    <button onclick="scrollToForm()">Go to Form 💖</button>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section" id="form-section">
+    <h2>What's on your mind?</h2>
+    <form id="complaintForm" action="https://formspree.io/f/xovwgkwb" method="POST">
+      <input name="title" placeholder="Title..." required>
+      <textarea name="message" rows="5" placeholder="Type your thoughts here..." required></textarea>
+      <button type="submit">Send 💗</button>
+    </form>
+    <div class="thank-you" id="thankYouMessage">
+      <p>Thank you, cutie 💗 I’ll do my best to fix things!</p>
+      <button onclick="submitAnother()">Send Another</button>
+    </div>
+  </section>
+
+  <script>
+    function scrollToForm() {
+      document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const form = document.getElementById('complaintForm');
+    const ty = document.getElementById('thankYouMessage');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} })
+        .then(r => r.ok ? (() => {
+          form.style.display = 'none';
+          ty.style.display = 'block';
+        })() : alert("Oops! Try again."));
+    });
+    function submitAnother() {
+      form.reset(); form.style.display = 'flex'; ty.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
