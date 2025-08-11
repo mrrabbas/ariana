@@ -75,43 +75,8 @@ body {
 .star3 { bottom: 20%; left: 30%; }
 .star4 { top: 75%; right: 25%; }
 
-/* Monster High Bats */
-.bat {
-  position: absolute;
-  width: 30px;
-  height: 15px;
-  background: black;
-  border-radius: 50% 50% 0 0;
-}
-.bat::before,
-.bat::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 15px;
-  height: 15px;
-  background: black;
-  border-radius: 50% 50% 0 0;
-}
-.bat::before { left: -15px; transform: rotate(-20deg); }
-.bat::after { right: -15px; transform: rotate(20deg); }
 
-.bat1 { top: 20%; left: 5%; }
-.bat2 { bottom: 25%; right: 10%; }
 
-/* Monster High Spiderwebs */
-.web {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border: 2px solid #8b008b;
-  border-radius: 50%;
-  background: radial-gradient(circle, transparent 20%, rgba(139,0,139,0.3) 20%);
-  clip-path: polygon(50% 0%, 100% 25%, 80% 100%, 20% 100%, 0% 25%);
-  opacity: 0.5;
-}
-.web1 { top: 0; right: 0; transform: translate(-10%, 10%); }
-.web2 { bottom: 0; left: 0; transform: translate(10%, -10%); }
 
 /* Home Section */
 .home {
