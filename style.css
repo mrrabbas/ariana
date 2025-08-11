@@ -14,7 +14,7 @@ body {
   pointer-events: none;
 }
 
-/* Spread & Static Positioning */
+/* Sanrio Characters */
 .kitty1 { top: 50px; left: 30px; width: 80px; }
 .kitty2 { bottom: 100px; right: 60px; width: 75px; }
 .kitty3 { top: 350px; right: 100px; width: 70px; }
@@ -30,6 +30,11 @@ body {
 
 .rose1 { bottom: 0; left: 0; width: 130px; }
 .rose2 { bottom: 0; right: 0; width: 130px; }
+
+/* Monster High Characters */
+.elizabat1 { top: 80px; right: 40px; width: 120px; }
+.frankie1 { bottom: 90px; left: 50px; width: 110px; }
+.draculaura1 { top: 300px; left: 40px; width: 115px; }
 
 /* Hearts */
 .heart {
@@ -69,6 +74,44 @@ body {
 .star2 { top: 40%; right: 10%; }
 .star3 { bottom: 20%; left: 30%; }
 .star4 { top: 75%; right: 25%; }
+
+/* Monster High Bats */
+.bat {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  background: black;
+  border-radius: 50% 50% 0 0;
+}
+.bat::before,
+.bat::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50% 50% 0 0;
+}
+.bat::before { left: -15px; transform: rotate(-20deg); }
+.bat::after { right: -15px; transform: rotate(20deg); }
+
+.bat1 { top: 20%; left: 5%; }
+.bat2 { bottom: 25%; right: 10%; }
+
+/* Monster High Spiderwebs */
+.web {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #8b008b;
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent 20%, rgba(139,0,139,0.3) 20%);
+  clip-path: polygon(50% 0%, 100% 25%, 80% 100%, 20% 100%, 0% 25%);
+  opacity: 0.5;
+}
+.web1 { top: 0; right: 0; transform: translate(-10%, 10%); }
+.web2 { bottom: 0; left: 0; transform: translate(10%, -10%); }
 
 /* Home Section */
 .home {
@@ -144,7 +187,7 @@ input, textarea {
   z-index: 2;
 }
 
-/* 🔽 Responsive for phones/tablets */
+/* Responsive for phones/tablets */
 @media (max-width: 768px) {
   h1 {
     font-size: 2em;
